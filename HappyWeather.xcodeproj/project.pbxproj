@@ -1,0 +1,620 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C2ACD9FD195EF73600F4745E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2ACD9FC195EF73600F4745E /* Foundation.framework */; };
+		C2ACD9FF195EF73600F4745E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2ACD9FE195EF73600F4745E /* CoreGraphics.framework */; };
+		C2ACDA01195EF73600F4745E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2ACDA00195EF73600F4745E /* UIKit.framework */; };
+		C2ACDA07195EF73600F4745E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C2ACDA05195EF73600F4745E /* InfoPlist.strings */; };
+		C2ACDA09195EF73600F4745E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C2ACDA08195EF73600F4745E /* main.m */; };
+		C2ACDA0D195EF73600F4745E /* HACAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C2ACDA0C195EF73600F4745E /* HACAppDelegate.m */; };
+		C2ACDA10195EF73600F4745E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2ACDA0E195EF73600F4745E /* Main.storyboard */; };
+		C2ACDA13195EF73600F4745E /* HACWeatherListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C2ACDA12195EF73600F4745E /* HACWeatherListVC.m */; };
+		C2ACDA15195EF73600F4745E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2ACDA14195EF73600F4745E /* Images.xcassets */; };
+		C2ACDA1C195EF73600F4745E /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2ACDA1B195EF73600F4745E /* XCTest.framework */; };
+		C2ACDA1D195EF73600F4745E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2ACD9FC195EF73600F4745E /* Foundation.framework */; };
+		C2ACDA1E195EF73600F4745E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2ACDA00195EF73600F4745E /* UIKit.framework */; };
+		C2ACDA26195EF73600F4745E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C2ACDA24195EF73600F4745E /* InfoPlist.strings */; };
+		C2ACDA28195EF73600F4745E /* HappyWeatherTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C2ACDA27195EF73600F4745E /* HappyWeatherTests.m */; };
+		C2ACDA32195EFB0C00F4745E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2ACDA31195EFB0C00F4745E /* CoreLocation.framework */; };
+		C2ACDA36195F012400F4745E /* HACOpenWeatherMapAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = C2ACDA35195F012400F4745E /* HACOpenWeatherMapAPI.m */; };
+		C2ACDA39195F0E5E00F4745E /* HACWeatherInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = C2ACDA38195F0E5E00F4745E /* HACWeatherInfo.m */; };
+		C2ACDA3C195FC0F900F4745E /* HACGoogleGeocodingAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = C2ACDA3B195FC0F900F4745E /* HACGoogleGeocodingAPI.m */; };
+		C2ACDA3F195FC3A100F4745E /* HACAddressInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = C2ACDA3E195FC3A100F4745E /* HACAddressInfo.m */; };
+		C2ACDA43195FEE8800F4745E /* HACWeatherTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C2ACDA42195FEE8800F4745E /* HACWeatherTableViewCell.m */; };
+		C2ACDA45195FF25E00F4745E /* HACWeatherTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2ACDA44195FF25E00F4745E /* HACWeatherTableViewCell.xib */; };
+		C2ACDA481960058900F4745E /* NSDateUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = C2ACDA471960058900F4745E /* NSDateUtils.m */; };
+		C2ACDA4A1960210000F4745E /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2ACDA491960210000F4745E /* ImageIO.framework */; };
+		C2ACDA4C1960210700F4745E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2ACDA4B1960210700F4745E /* MapKit.framework */; };
+		C2ACDA5519603AAB00F4745E /* HACWeatherDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = C2ACDA5419603AAB00F4745E /* HACWeatherDetailView.m */; };
+		C2ACDA58196067A200F4745E /* HappyWord.plist in Resources */ = {isa = PBXBuildFile; fileRef = C2ACDA57196067A200F4745E /* HappyWord.plist */; };
+		C2ACDA5B196069C000F4745E /* HACHappyWordManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C2ACDA5A196069C000F4745E /* HACHappyWordManager.m */; };
+		C2ACDA5E1960794C00F4745E /* HACLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = C2ACDA5D1960794C00F4745E /* HACLoadingView.m */; };
+		FA4DF3E6212F42EF8613E11A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B4DEEA728E549F798F491CC /* libPods.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C2ACDA1F195EF73600F4745E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C2ACD9F1195EF73600F4745E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C2ACD9F8195EF73600F4745E;
+			remoteInfo = HappyWeather;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		6B4DEEA728E549F798F491CC /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		7EDFD32A492F481BBCA053AC /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		C2ACD9F9195EF73600F4745E /* HappyWeather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HappyWeather.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2ACD9FC195EF73600F4745E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		C2ACD9FE195EF73600F4745E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		C2ACDA00195EF73600F4745E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		C2ACDA04195EF73600F4745E /* HappyWeather-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HappyWeather-Info.plist"; sourceTree = "<group>"; };
+		C2ACDA06195EF73600F4745E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C2ACDA08195EF73600F4745E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C2ACDA0A195EF73600F4745E /* HappyWeather-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HappyWeather-Prefix.pch"; sourceTree = "<group>"; };
+		C2ACDA0B195EF73600F4745E /* HACAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HACAppDelegate.h; sourceTree = "<group>"; };
+		C2ACDA0C195EF73600F4745E /* HACAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HACAppDelegate.m; sourceTree = "<group>"; };
+		C2ACDA0F195EF73600F4745E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C2ACDA11195EF73600F4745E /* HACWeatherListVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HACWeatherListVC.h; sourceTree = "<group>"; };
+		C2ACDA12195EF73600F4745E /* HACWeatherListVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HACWeatherListVC.m; sourceTree = "<group>"; };
+		C2ACDA14195EF73600F4745E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		C2ACDA1A195EF73600F4745E /* HappyWeatherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HappyWeatherTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2ACDA1B195EF73600F4745E /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		C2ACDA23195EF73600F4745E /* HappyWeatherTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HappyWeatherTests-Info.plist"; sourceTree = "<group>"; };
+		C2ACDA25195EF73600F4745E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C2ACDA27195EF73600F4745E /* HappyWeatherTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HappyWeatherTests.m; sourceTree = "<group>"; };
+		C2ACDA31195EFB0C00F4745E /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		C2ACDA34195F012400F4745E /* HACOpenWeatherMapAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HACOpenWeatherMapAPI.h; sourceTree = "<group>"; };
+		C2ACDA35195F012400F4745E /* HACOpenWeatherMapAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HACOpenWeatherMapAPI.m; sourceTree = "<group>"; };
+		C2ACDA37195F0E5E00F4745E /* HACWeatherInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HACWeatherInfo.h; sourceTree = "<group>"; };
+		C2ACDA38195F0E5E00F4745E /* HACWeatherInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HACWeatherInfo.m; sourceTree = "<group>"; };
+		C2ACDA3A195FC0F900F4745E /* HACGoogleGeocodingAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HACGoogleGeocodingAPI.h; sourceTree = "<group>"; };
+		C2ACDA3B195FC0F900F4745E /* HACGoogleGeocodingAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HACGoogleGeocodingAPI.m; sourceTree = "<group>"; };
+		C2ACDA3D195FC3A100F4745E /* HACAddressInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HACAddressInfo.h; sourceTree = "<group>"; };
+		C2ACDA3E195FC3A100F4745E /* HACAddressInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HACAddressInfo.m; sourceTree = "<group>"; };
+		C2ACDA41195FEE8800F4745E /* HACWeatherTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HACWeatherTableViewCell.h; sourceTree = "<group>"; };
+		C2ACDA42195FEE8800F4745E /* HACWeatherTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HACWeatherTableViewCell.m; sourceTree = "<group>"; };
+		C2ACDA44195FF25E00F4745E /* HACWeatherTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HACWeatherTableViewCell.xib; sourceTree = "<group>"; };
+		C2ACDA461960058900F4745E /* NSDateUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDateUtils.h; sourceTree = "<group>"; };
+		C2ACDA471960058900F4745E /* NSDateUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDateUtils.m; sourceTree = "<group>"; };
+		C2ACDA491960210000F4745E /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		C2ACDA4B1960210700F4745E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		C2ACDA5319603AAB00F4745E /* HACWeatherDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HACWeatherDetailView.h; sourceTree = "<group>"; };
+		C2ACDA5419603AAB00F4745E /* HACWeatherDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HACWeatherDetailView.m; sourceTree = "<group>"; };
+		C2ACDA57196067A200F4745E /* HappyWord.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = HappyWord.plist; sourceTree = "<group>"; };
+		C2ACDA59196069C000F4745E /* HACHappyWordManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HACHappyWordManager.h; sourceTree = "<group>"; };
+		C2ACDA5A196069C000F4745E /* HACHappyWordManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HACHappyWordManager.m; sourceTree = "<group>"; };
+		C2ACDA5C1960794C00F4745E /* HACLoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HACLoadingView.h; sourceTree = "<group>"; };
+		C2ACDA5D1960794C00F4745E /* HACLoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HACLoadingView.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C2ACD9F6195EF73600F4745E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2ACDA4C1960210700F4745E /* MapKit.framework in Frameworks */,
+				C2ACDA4A1960210000F4745E /* ImageIO.framework in Frameworks */,
+				C2ACDA32195EFB0C00F4745E /* CoreLocation.framework in Frameworks */,
+				C2ACD9FF195EF73600F4745E /* CoreGraphics.framework in Frameworks */,
+				C2ACDA01195EF73600F4745E /* UIKit.framework in Frameworks */,
+				C2ACD9FD195EF73600F4745E /* Foundation.framework in Frameworks */,
+				FA4DF3E6212F42EF8613E11A /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C2ACDA17195EF73600F4745E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2ACDA1C195EF73600F4745E /* XCTest.framework in Frameworks */,
+				C2ACDA1E195EF73600F4745E /* UIKit.framework in Frameworks */,
+				C2ACDA1D195EF73600F4745E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C2ACD9F0195EF73600F4745E = {
+			isa = PBXGroup;
+			children = (
+				C2ACDA02195EF73600F4745E /* HappyWeather */,
+				C2ACDA21195EF73600F4745E /* HappyWeatherTests */,
+				C2ACD9FB195EF73600F4745E /* Frameworks */,
+				C2ACD9FA195EF73600F4745E /* Products */,
+				7EDFD32A492F481BBCA053AC /* Pods.xcconfig */,
+			);
+			sourceTree = "<group>";
+		};
+		C2ACD9FA195EF73600F4745E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C2ACD9F9195EF73600F4745E /* HappyWeather.app */,
+				C2ACDA1A195EF73600F4745E /* HappyWeatherTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C2ACD9FB195EF73600F4745E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C2ACDA4B1960210700F4745E /* MapKit.framework */,
+				C2ACDA491960210000F4745E /* ImageIO.framework */,
+				C2ACDA31195EFB0C00F4745E /* CoreLocation.framework */,
+				C2ACD9FC195EF73600F4745E /* Foundation.framework */,
+				C2ACD9FE195EF73600F4745E /* CoreGraphics.framework */,
+				C2ACDA00195EF73600F4745E /* UIKit.framework */,
+				C2ACDA1B195EF73600F4745E /* XCTest.framework */,
+				6B4DEEA728E549F798F491CC /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C2ACDA02195EF73600F4745E /* HappyWeather */ = {
+			isa = PBXGroup;
+			children = (
+				C2ACDA561960677700F4745E /* Resource */,
+				C2ACDA40195FEE4F00F4745E /* View */,
+				C2ACDA33195F002D00F4745E /* Model */,
+				C2ACDA0B195EF73600F4745E /* HACAppDelegate.h */,
+				C2ACDA0C195EF73600F4745E /* HACAppDelegate.m */,
+				C2ACDA0E195EF73600F4745E /* Main.storyboard */,
+				C2ACDA11195EF73600F4745E /* HACWeatherListVC.h */,
+				C2ACDA12195EF73600F4745E /* HACWeatherListVC.m */,
+				C2ACDA14195EF73600F4745E /* Images.xcassets */,
+				C2ACDA03195EF73600F4745E /* Supporting Files */,
+			);
+			path = HappyWeather;
+			sourceTree = "<group>";
+		};
+		C2ACDA03195EF73600F4745E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C2ACDA04195EF73600F4745E /* HappyWeather-Info.plist */,
+				C2ACDA05195EF73600F4745E /* InfoPlist.strings */,
+				C2ACDA08195EF73600F4745E /* main.m */,
+				C2ACDA0A195EF73600F4745E /* HappyWeather-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C2ACDA21195EF73600F4745E /* HappyWeatherTests */ = {
+			isa = PBXGroup;
+			children = (
+				C2ACDA27195EF73600F4745E /* HappyWeatherTests.m */,
+				C2ACDA22195EF73600F4745E /* Supporting Files */,
+			);
+			path = HappyWeatherTests;
+			sourceTree = "<group>";
+		};
+		C2ACDA22195EF73600F4745E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C2ACDA23195EF73600F4745E /* HappyWeatherTests-Info.plist */,
+				C2ACDA24195EF73600F4745E /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C2ACDA33195F002D00F4745E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C2ACDA34195F012400F4745E /* HACOpenWeatherMapAPI.h */,
+				C2ACDA35195F012400F4745E /* HACOpenWeatherMapAPI.m */,
+				C2ACDA37195F0E5E00F4745E /* HACWeatherInfo.h */,
+				C2ACDA38195F0E5E00F4745E /* HACWeatherInfo.m */,
+				C2ACDA3A195FC0F900F4745E /* HACGoogleGeocodingAPI.h */,
+				C2ACDA3B195FC0F900F4745E /* HACGoogleGeocodingAPI.m */,
+				C2ACDA3D195FC3A100F4745E /* HACAddressInfo.h */,
+				C2ACDA3E195FC3A100F4745E /* HACAddressInfo.m */,
+				C2ACDA461960058900F4745E /* NSDateUtils.h */,
+				C2ACDA471960058900F4745E /* NSDateUtils.m */,
+				C2ACDA59196069C000F4745E /* HACHappyWordManager.h */,
+				C2ACDA5A196069C000F4745E /* HACHappyWordManager.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C2ACDA40195FEE4F00F4745E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C2ACDA41195FEE8800F4745E /* HACWeatherTableViewCell.h */,
+				C2ACDA42195FEE8800F4745E /* HACWeatherTableViewCell.m */,
+				C2ACDA44195FF25E00F4745E /* HACWeatherTableViewCell.xib */,
+				C2ACDA5319603AAB00F4745E /* HACWeatherDetailView.h */,
+				C2ACDA5419603AAB00F4745E /* HACWeatherDetailView.m */,
+				C2ACDA5C1960794C00F4745E /* HACLoadingView.h */,
+				C2ACDA5D1960794C00F4745E /* HACLoadingView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C2ACDA561960677700F4745E /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				C2ACDA57196067A200F4745E /* HappyWord.plist */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C2ACD9F8195EF73600F4745E /* HappyWeather */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C2ACDA2B195EF73600F4745E /* Build configuration list for PBXNativeTarget "HappyWeather" */;
+			buildPhases = (
+				864FBF7093E04F9EA559DED6 /* Check Pods Manifest.lock */,
+				C2ACD9F5195EF73600F4745E /* Sources */,
+				C2ACD9F6195EF73600F4745E /* Frameworks */,
+				C2ACD9F7195EF73600F4745E /* Resources */,
+				73CFB4B112F440B6866777E6 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HappyWeather;
+			productName = HappyWeather;
+			productReference = C2ACD9F9195EF73600F4745E /* HappyWeather.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C2ACDA19195EF73600F4745E /* HappyWeatherTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C2ACDA2E195EF73600F4745E /* Build configuration list for PBXNativeTarget "HappyWeatherTests" */;
+			buildPhases = (
+				C2ACDA16195EF73600F4745E /* Sources */,
+				C2ACDA17195EF73600F4745E /* Frameworks */,
+				C2ACDA18195EF73600F4745E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C2ACDA20195EF73600F4745E /* PBXTargetDependency */,
+			);
+			name = HappyWeatherTests;
+			productName = HappyWeatherTests;
+			productReference = C2ACDA1A195EF73600F4745E /* HappyWeatherTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C2ACD9F1195EF73600F4745E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = HAC;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Takahiro Nishinobu";
+				TargetAttributes = {
+					C2ACDA19195EF73600F4745E = {
+						TestTargetID = C2ACD9F8195EF73600F4745E;
+					};
+				};
+			};
+			buildConfigurationList = C2ACD9F4195EF73600F4745E /* Build configuration list for PBXProject "HappyWeather" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C2ACD9F0195EF73600F4745E;
+			productRefGroup = C2ACD9FA195EF73600F4745E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C2ACD9F8195EF73600F4745E /* HappyWeather */,
+				C2ACDA19195EF73600F4745E /* HappyWeatherTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C2ACD9F7195EF73600F4745E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2ACDA15195EF73600F4745E /* Images.xcassets in Resources */,
+				C2ACDA07195EF73600F4745E /* InfoPlist.strings in Resources */,
+				C2ACDA10195EF73600F4745E /* Main.storyboard in Resources */,
+				C2ACDA45195FF25E00F4745E /* HACWeatherTableViewCell.xib in Resources */,
+				C2ACDA58196067A200F4745E /* HappyWord.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C2ACDA18195EF73600F4745E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2ACDA26195EF73600F4745E /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		73CFB4B112F440B6866777E6 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		864FBF7093E04F9EA559DED6 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C2ACD9F5195EF73600F4745E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2ACDA13195EF73600F4745E /* HACWeatherListVC.m in Sources */,
+				C2ACDA39195F0E5E00F4745E /* HACWeatherInfo.m in Sources */,
+				C2ACDA481960058900F4745E /* NSDateUtils.m in Sources */,
+				C2ACDA3F195FC3A100F4745E /* HACAddressInfo.m in Sources */,
+				C2ACDA5E1960794C00F4745E /* HACLoadingView.m in Sources */,
+				C2ACDA5B196069C000F4745E /* HACHappyWordManager.m in Sources */,
+				C2ACDA43195FEE8800F4745E /* HACWeatherTableViewCell.m in Sources */,
+				C2ACDA09195EF73600F4745E /* main.m in Sources */,
+				C2ACDA0D195EF73600F4745E /* HACAppDelegate.m in Sources */,
+				C2ACDA5519603AAB00F4745E /* HACWeatherDetailView.m in Sources */,
+				C2ACDA3C195FC0F900F4745E /* HACGoogleGeocodingAPI.m in Sources */,
+				C2ACDA36195F012400F4745E /* HACOpenWeatherMapAPI.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C2ACDA16195EF73600F4745E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2ACDA28195EF73600F4745E /* HappyWeatherTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C2ACDA20195EF73600F4745E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C2ACD9F8195EF73600F4745E /* HappyWeather */;
+			targetProxy = C2ACDA1F195EF73600F4745E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C2ACDA05195EF73600F4745E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C2ACDA06195EF73600F4745E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		C2ACDA0E195EF73600F4745E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C2ACDA0F195EF73600F4745E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C2ACDA24195EF73600F4745E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C2ACDA25195EF73600F4745E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C2ACDA29195EF73600F4745E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Takahiro Nishinobu (Y7PXMK6778)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Takahiro Nishinobu (Y7PXMK6778)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "E8400AE8-3C74-42EC-A8BD-CFF91366FAC2";
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C2ACDA2A195EF73600F4745E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				PROVISIONING_PROFILE = "E8400AE8-3C74-42EC-A8BD-CFF91366FAC2";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C2ACDA2C195EF73600F4745E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7EDFD32A492F481BBCA053AC /* Pods.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HappyWeather/HappyWeather-Prefix.pch";
+				INFOPLIST_FILE = "HappyWeather/HappyWeather-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "E8400AE8-3C74-42EC-A8BD-CFF91366FAC2";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		C2ACDA2D195EF73600F4745E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7EDFD32A492F481BBCA053AC /* Pods.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HappyWeather/HappyWeather-Prefix.pch";
+				INFOPLIST_FILE = "HappyWeather/HappyWeather-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "E8400AE8-3C74-42EC-A8BD-CFF91366FAC2";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		C2ACDA2F195EF73600F4745E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/HappyWeather.app/HappyWeather";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HappyWeather/HappyWeather-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "HappyWeatherTests/HappyWeatherTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		C2ACDA30195EF73600F4745E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/HappyWeather.app/HappyWeather";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HappyWeather/HappyWeather-Prefix.pch";
+				INFOPLIST_FILE = "HappyWeatherTests/HappyWeatherTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C2ACD9F4195EF73600F4745E /* Build configuration list for PBXProject "HappyWeather" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C2ACDA29195EF73600F4745E /* Debug */,
+				C2ACDA2A195EF73600F4745E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C2ACDA2B195EF73600F4745E /* Build configuration list for PBXNativeTarget "HappyWeather" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C2ACDA2C195EF73600F4745E /* Debug */,
+				C2ACDA2D195EF73600F4745E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C2ACDA2E195EF73600F4745E /* Build configuration list for PBXNativeTarget "HappyWeatherTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C2ACDA2F195EF73600F4745E /* Debug */,
+				C2ACDA30195EF73600F4745E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C2ACD9F1195EF73600F4745E /* Project object */;
+}
