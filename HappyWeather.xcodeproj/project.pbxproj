@@ -173,20 +173,20 @@
 		C2ACDA02195EF73600F4745E /* HappyWeather */ = {
 			isa = PBXGroup;
 			children = (
-				C2827DE81960E57E000AE9FF /* Reachability.h */,
-				C2827DE91960E57E000AE9FF /* Reachability.m */,
-				C2ACDA561960677700F4745E /* Resource */,
-				C2ACDA40195FEE4F00F4745E /* View */,
-				C2ACDA33195F002D00F4745E /* Model */,
 				C2ACDA0B195EF73600F4745E /* HACAppDelegate.h */,
 				C2ACDA0C195EF73600F4745E /* HACAppDelegate.m */,
-				C2ACDA0E195EF73600F4745E /* Main.storyboard */,
 				C2ACDA11195EF73600F4745E /* HACWeatherListVC.h */,
 				C2ACDA12195EF73600F4745E /* HACWeatherListVC.m */,
 				C2ACDA14195EF73600F4745E /* Images.xcassets */,
+				C2ACDA0E195EF73600F4745E /* Main.storyboard */,
+				C2ACDA33195F002D00F4745E /* Model */,
+				C2827DE81960E57E000AE9FF /* Reachability.h */,
+				C2827DE91960E57E000AE9FF /* Reachability.m */,
+				C2ACDA561960677700F4745E /* Resource */,
 				C2ACDA03195EF73600F4745E /* Supporting Files */,
 				C2827DED1960E9F6000AE9FF /* UIColor+HexColor.h */,
 				C2827DEE1960E9F6000AE9FF /* UIColor+HexColor.m */,
+				C2ACDA40195FEE4F00F4745E /* View */,
 			);
 			path = HappyWeather;
 			sourceTree = "<group>";
@@ -195,9 +195,9 @@
 			isa = PBXGroup;
 			children = (
 				C2ACDA04195EF73600F4745E /* HappyWeather-Info.plist */,
+				C2ACDA0A195EF73600F4745E /* HappyWeather-Prefix.pch */,
 				C2ACDA05195EF73600F4745E /* InfoPlist.strings */,
 				C2ACDA08195EF73600F4745E /* main.m */,
-				C2ACDA0A195EF73600F4745E /* HappyWeather-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -223,18 +223,18 @@
 		C2ACDA33195F002D00F4745E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C2ACDA3D195FC3A100F4745E /* HACAddressInfo.h */,
+				C2ACDA3E195FC3A100F4745E /* HACAddressInfo.m */,
+				C2ACDA3A195FC0F900F4745E /* HACGoogleGeocodingAPI.h */,
+				C2ACDA3B195FC0F900F4745E /* HACGoogleGeocodingAPI.m */,
+				C2ACDA59196069C000F4745E /* HACHappyWordManager.h */,
+				C2ACDA5A196069C000F4745E /* HACHappyWordManager.m */,
 				C2ACDA34195F012400F4745E /* HACOpenWeatherMapAPI.h */,
 				C2ACDA35195F012400F4745E /* HACOpenWeatherMapAPI.m */,
 				C2ACDA37195F0E5E00F4745E /* HACWeatherInfo.h */,
 				C2ACDA38195F0E5E00F4745E /* HACWeatherInfo.m */,
-				C2ACDA3A195FC0F900F4745E /* HACGoogleGeocodingAPI.h */,
-				C2ACDA3B195FC0F900F4745E /* HACGoogleGeocodingAPI.m */,
-				C2ACDA3D195FC3A100F4745E /* HACAddressInfo.h */,
-				C2ACDA3E195FC3A100F4745E /* HACAddressInfo.m */,
 				C2ACDA461960058900F4745E /* NSDateUtils.h */,
 				C2ACDA471960058900F4745E /* NSDateUtils.m */,
-				C2ACDA59196069C000F4745E /* HACHappyWordManager.h */,
-				C2ACDA5A196069C000F4745E /* HACHappyWordManager.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -242,13 +242,13 @@
 		C2ACDA40195FEE4F00F4745E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C2ACDA5C1960794C00F4745E /* HACLoadingView.h */,
+				C2ACDA5D1960794C00F4745E /* HACLoadingView.m */,
+				C2ACDA5319603AAB00F4745E /* HACWeatherDetailView.h */,
+				C2ACDA5419603AAB00F4745E /* HACWeatherDetailView.m */,
 				C2ACDA41195FEE8800F4745E /* HACWeatherTableViewCell.h */,
 				C2ACDA42195FEE8800F4745E /* HACWeatherTableViewCell.m */,
 				C2ACDA44195FF25E00F4745E /* HACWeatherTableViewCell.xib */,
-				C2ACDA5319603AAB00F4745E /* HACWeatherDetailView.h */,
-				C2ACDA5419603AAB00F4745E /* HACWeatherDetailView.m */,
-				C2ACDA5C1960794C00F4745E /* HACLoadingView.h */,
-				C2ACDA5D1960794C00F4745E /* HACLoadingView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -256,8 +256,8 @@
 		C2ACDA561960677700F4745E /* Resource */ = {
 			isa = PBXGroup;
 			children = (
-				C281082819612A8A00C48426 /* notactive.png */,
 				C2ACDA57196067A200F4745E /* HappyWord.plist */,
+				C281082819612A8A00C48426 /* notactive.png */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -477,8 +477,8 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Takahiro Nishinobu (9Z933CSWHM)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Takahiro Nishinobu (9Z933CSWHM)";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -496,7 +496,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "1865E08F-5955-4267-81A0-802C7432B879";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -517,7 +517,7 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -528,7 +528,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				PROVISIONING_PROFILE = "E8400AE8-3C74-42EC-A8BD-CFF91366FAC2";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -544,7 +544,7 @@
 				GCC_PREFIX_HEADER = "HappyWeather/HappyWeather-Prefix.pch";
 				INFOPLIST_FILE = "HappyWeather/HappyWeather-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "1865E08F-5955-4267-81A0-802C7432B879";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -559,7 +559,7 @@
 				GCC_PREFIX_HEADER = "HappyWeather/HappyWeather-Prefix.pch";
 				INFOPLIST_FILE = "HappyWeather/HappyWeather-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "E8400AE8-3C74-42EC-A8BD-CFF91366FAC2";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
