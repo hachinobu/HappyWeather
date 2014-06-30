@@ -88,7 +88,7 @@ static NSString * const HACWeatherIconURLString = @"http://openweathermap.org/im
     NSDictionary *parameters = @{@"units": @"metric",
                                  @"lat": @(location.coordinate.latitude),
                                  @"lon": @(location.coordinate.longitude),
-                                 @"cnt": @7,
+                                 @"cnt": @14,
                                  @"mode": @"json"};
     
     [apiClient weatherInfoWithPath:@"forecast/daily" parameters:parameters success:^(NSURLSessionDataTask *task, id responseObject) {

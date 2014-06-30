@@ -11,6 +11,7 @@
 @class HACWeatherInfo;
 @interface HACWeatherDetailView : UIView
 
+- (void)noActive;
 - (void)configureViewWithWeatherInfo:(HACWeatherInfo *)weatherInfo;
 
 @end

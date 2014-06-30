@@ -12,6 +12,7 @@
 #import "HACWeatherTableViewCell.h"
 #import "HACWeatherDetailView.h"
 #import "HACLoadingView.h"
+#import "Reachability.h"
 
 @interface HACWeatherListVC () <CLLocationManagerDelegate>
 
@@ -32,7 +33,7 @@
     self.locationManager = [[CLLocationManager alloc] init];
     self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
     self.locationManager.delegate = self;
-    [self reloadWeekWeather];
+    [self.locationManager startUpdatingLocation];
     
     UINib *nib = [UINib nibWithNibName:@"HACWeatherTableViewCell" bundle:nil];
     [self.weatherTableView registerNib:nib forCellReuseIdentifier:HACWeatherCellIdentifier];
@@ -51,6 +52,25 @@
 
 - (void)reloadWeekWeather
 {
+    Reachability *reachablity = [Reachability reachabilityForInternetConnection];
+    NetworkStatus status = [reachablity currentReachabilityStatus];
+    if (status == NotReachable) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil message:NSLocalizedString(@"ネットワーク接続を確認してください", nil) delegate:nil cancelButtonTitle:NSLocalizedString(@"OK", nil) otherButtonTitles:nil, nil];
+        [alert show];
+        return;
+    }
+    
+    if ([CLLocationManager authorizationStatus] != kCLAuthorizationStatusAuthorized) {
+        
+        if ([self.weekWeatherInfos count] == 0) {
+            [self.weatherDetailView noActive];
+        }
+        
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil message:NSLocalizedString(@"設定 > プライバシー > 位置情報サービスからHappyWeatherによる位置情報の利用を許可してください。", nil) delegate:nil cancelButtonTitle:NSLocalizedString(@"OK", nil) otherButtonTitles:nil, nil];
+        [alert show];
+        return;
+    }
+    
     [self.locationManager startUpdatingLocation];
 }
 
@@ -109,7 +129,8 @@
         [loadView hideWithAnimated:YES];
         
     } failure:^(NSError *error) {
-        
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil message:[error userInfo][@"NSLocalizedDescription"] delegate:nil cancelButtonTitle:NSLocalizedString(@"OK", nil) otherButtonTitles:nil, nil];
+        [alert show];
     }];
 }
 

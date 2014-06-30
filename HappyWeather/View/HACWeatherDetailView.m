@@ -10,6 +10,7 @@
 #import "HACWeatherInfo.h"
 #import <SDWebImage/UIImageView+WebCache.h>
 #import "HACHappyWordManager.h"
+#import "UIColor+HexColor.h"
 
 typedef NS_ENUM(NSUInteger, ViewType) {
     DateViewType = 1,
@@ -26,6 +27,7 @@ typedef NS_ENUM(NSUInteger, ViewType) {
 @property (nonatomic, strong) UILabel *maxTempLabel;
 @property (nonatomic, strong) UILabel *minTempLabel;
 @property (nonatomic, strong) UITextView *messageView;
+@property (nonatomic, strong) UIImageView *noActiveImageView;
 
 @end
 
@@ -43,6 +45,15 @@ typedef NS_ENUM(NSUInteger, ViewType) {
 - (void)awakeFromNib
 {
     [super awakeFromNib];
+    self.noActiveImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0.0f, 0.0f, 180.0f, 180.0f)];
+    self.noActiveImageView.image = [UIImage imageNamed:@"notactive"];
+    self.noActiveImageView.center = self.center;
+    [self addSubview:self.noActiveImageView];
+}
+
+- (void)noActive
+{
+    self.noActiveImageView.hidden = NO;
 }
 
 - (void)clearContent
@@ -52,6 +63,7 @@ typedef NS_ENUM(NSUInteger, ViewType) {
     self.maxTempLabel.attributedText = nil;
     self.minTempLabel.attributedText = nil;
     self.messageView.text = @"";
+    self.noActiveImageView.hidden = YES;
 }
 
 - (void)configureViewWithWeatherInfo:(HACWeatherInfo *)weatherInfo
@@ -90,18 +102,21 @@ typedef NS_ENUM(NSUInteger, ViewType) {
     
     //Happy Word
     self.messageView = (UITextView *)[self viewWithTag:MessageViewType];
-    self.messageView.font = [UIFont boldSystemFontOfSize:23.0f];
+    self.messageView.font = [UIFont systemFontOfSize:19.0f];
     self.messageView.textColor = [UIColor blueColor];
     
     NSRange seatchResult = [weatherInfo.weatherDesc rangeOfString:@"rain"];
     if (seatchResult.location == NSNotFound) {
         self.messageView.text = NSLocalizedString(@"いいことあるよ！\n幸せでありますように！", nil);
         self.messageView.textColor = [UIColor blackColor];
+        self.backgroundColor = [UIColor hac_colorWithHexString:@"#FAFAD2"];
         return;
     }
+    
     HACHappyWordManager *happyMg = [HACHappyWordManager sharedClient];
     NSString *happyText = [NSString stringWithFormat:@"%@\n%@", NSLocalizedString(@"[雨の日の幸せフレーズ]", nil), [happyMg randomHappyWord]];
     self.messageView.text = happyText;
+    self.backgroundColor = [UIColor hac_colorWithHexString:@"#AFEEEE"];
 }
 
 
