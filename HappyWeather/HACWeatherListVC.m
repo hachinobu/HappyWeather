@@ -12,7 +12,6 @@
 #import "HACWeatherTableViewCell.h"
 #import "HACWeatherDetailView.h"
 #import "HACLoadingView.h"
-#import "Reachability.h"
 
 @interface HACWeatherListVC () <CLLocationManagerDelegate>
 
@@ -52,14 +51,6 @@
 
 - (void)reloadWeekWeather
 {
-    Reachability *reachablity = [Reachability reachabilityForInternetConnection];
-    NetworkStatus status = [reachablity currentReachabilityStatus];
-    if (status == NotReachable) {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil message:NSLocalizedString(@"ネットワーク接続を確認してください", nil) delegate:nil cancelButtonTitle:NSLocalizedString(@"OK", nil) otherButtonTitles:nil, nil];
-        [alert show];
-        return;
-    }
-    
     if ([CLLocationManager authorizationStatus] != kCLAuthorizationStatusAuthorized) {
         
         if ([self.weekWeatherInfos count] == 0) {

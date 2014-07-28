@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		C281082919612A8A00C48426 /* notactive.png in Resources */ = {isa = PBXBuildFile; fileRef = C281082819612A8A00C48426 /* notactive.png */; };
-		C2827DEA1960E57E000AE9FF /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = C2827DE91960E57E000AE9FF /* Reachability.m */; };
 		C2827DEC1960E5FA000AE9FF /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2827DEB1960E5FA000AE9FF /* SystemConfiguration.framework */; };
 		C2827DEF1960E9F6000AE9FF /* UIColor+HexColor.m in Sources */ = {isa = PBXBuildFile; fileRef = C2827DEE1960E9F6000AE9FF /* UIColor+HexColor.m */; };
 		C2ACD9FD195EF73600F4745E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2ACD9FC195EF73600F4745E /* Foundation.framework */; };
@@ -56,8 +55,6 @@
 		6B4DEEA728E549F798F491CC /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EDFD32A492F481BBCA053AC /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		C281082819612A8A00C48426 /* notactive.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = notactive.png; sourceTree = "<group>"; };
-		C2827DE81960E57E000AE9FF /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
-		C2827DE91960E57E000AE9FF /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		C2827DEB1960E5FA000AE9FF /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		C2827DED1960E9F6000AE9FF /* UIColor+HexColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+HexColor.h"; sourceTree = "<group>"; };
 		C2827DEE1960E9F6000AE9FF /* UIColor+HexColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+HexColor.m"; sourceTree = "<group>"; };
@@ -183,8 +180,6 @@
 				C2ACDA14195EF73600F4745E /* Images.xcassets */,
 				C2ACDA0E195EF73600F4745E /* Main.storyboard */,
 				C2ACDA33195F002D00F4745E /* Model */,
-				C2827DE81960E57E000AE9FF /* Reachability.h */,
-				C2827DE91960E57E000AE9FF /* Reachability.m */,
 				C2ACDA561960677700F4745E /* Resource */,
 				C2ACDA03195EF73600F4745E /* Supporting Files */,
 				C2827DED1960E9F6000AE9FF /* UIColor+HexColor.h */,
@@ -402,7 +397,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C2827DEA1960E57E000AE9FF /* Reachability.m in Sources */,
 				C2ACDA13195EF73600F4745E /* HACWeatherListVC.m in Sources */,
 				C2ACDA39195F0E5E00F4745E /* HACWeatherInfo.m in Sources */,
 				C2ACDA481960058900F4745E /* NSDateUtils.m in Sources */,
