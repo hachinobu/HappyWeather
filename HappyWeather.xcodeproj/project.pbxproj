@@ -103,6 +103,9 @@
 		C2ACDA5A196069C000F4745E /* HACHappyWordManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HACHappyWordManager.m; sourceTree = "<group>"; };
 		C2ACDA5C1960794C00F4745E /* HACLoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HACLoadingView.h; sourceTree = "<group>"; };
 		C2ACDA5D1960794C00F4745E /* HACLoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HACLoadingView.m; sourceTree = "<group>"; };
+		C2B75B9219867F4200F144BD /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
+		C2B75B9319867F4200F144BD /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C2B75B9419867F4200F144BD /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -324,6 +327,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ja,
 			);
 			mainGroup = C2ACD9F0195EF73600F4745E;
 			productRefGroup = C2ACD9FA195EF73600F4745E /* Products */;
@@ -438,6 +442,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				C2ACDA06195EF73600F4745E /* en */,
+				C2B75B9319867F4200F144BD /* ja */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -446,6 +451,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				C2ACDA0F195EF73600F4745E /* Base */,
+				C2B75B9219867F4200F144BD /* ja */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -454,6 +460,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				C2ACDA25195EF73600F4745E /* en */,
+				C2B75B9419867F4200F144BD /* ja */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
