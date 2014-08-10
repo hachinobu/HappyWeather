@@ -114,7 +114,6 @@
                                 <rect key="frame" x="10" y="73" width="300" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="300" id="CX1-YZ-Ahc"/>
                                     <constraint firstAttribute="height" constant="24" id="Ok9-AS-9dh"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
@@ -146,7 +145,7 @@
                                 </constraints>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="5" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="stD-L1-gg2">
-                                <rect key="frame" x="10" y="204" width="300" height="90"/>
+                                <rect key="frame" x="10" y="190" width="300" height="108"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <attributedString key="attributedText"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -156,20 +155,16 @@
                         <constraints>
                             <constraint firstItem="VPA-di-EUa" firstAttribute="leading" secondItem="ccO-Ve-bOU" secondAttribute="leading" id="0fj-MA-dl4"/>
                             <constraint firstItem="VPA-di-EUa" firstAttribute="width" secondItem="ccO-Ve-bOU" secondAttribute="width" id="3JP-fS-VRy"/>
-                            <constraint firstItem="pDN-rw-Y6s" firstAttribute="leading" secondItem="PO8-cZ-LK7" secondAttribute="leading" constant="10" id="5KE-az-q7o"/>
                             <constraint firstAttribute="trailing" secondItem="glO-OE-jS1" secondAttribute="trailing" constant="10" id="5kp-Hy-FDD"/>
                             <constraint firstItem="glO-OE-jS1" firstAttribute="top" secondItem="PO8-cZ-LK7" secondAttribute="top" constant="73" id="Bk1-MP-SX6"/>
-                            <constraint firstItem="stD-L1-gg2" firstAttribute="top" secondItem="pDN-rw-Y6s" secondAttribute="bottom" constant="16" id="Dxd-BI-QMK"/>
+                            <constraint firstItem="stD-L1-gg2" firstAttribute="top" secondItem="pDN-rw-Y6s" secondAttribute="bottom" constant="2" id="Dxd-BI-QMK"/>
                             <constraint firstItem="VPA-di-EUa" firstAttribute="top" secondItem="glO-OE-jS1" secondAttribute="bottom" constant="27" id="IfH-de-Dvr"/>
                             <constraint firstItem="VPA-di-EUa" firstAttribute="leading" secondItem="pDN-rw-Y6s" secondAttribute="trailing" constant="9" id="Lb9-ES-3qg"/>
-                            <constraint firstItem="ccO-Ve-bOU" firstAttribute="leading" secondItem="pDN-rw-Y6s" secondAttribute="trailing" constant="9" id="UuX-DP-4dG"/>
-                            <constraint firstItem="l5s-Oi-tue" firstAttribute="top" secondItem="stD-L1-gg2" secondAttribute="bottom" constant="6" id="YAE-au-fgH"/>
+                            <constraint firstItem="l5s-Oi-tue" firstAttribute="top" secondItem="stD-L1-gg2" secondAttribute="bottom" constant="2" id="YAE-au-fgH"/>
                             <constraint firstAttribute="trailing" secondItem="VPA-di-EUa" secondAttribute="trailing" constant="9" id="ZvO-zR-UwY"/>
                             <constraint firstAttribute="trailing" secondItem="stD-L1-gg2" secondAttribute="trailing" constant="10" id="bDF-sV-3iR"/>
                             <constraint firstItem="glO-OE-jS1" firstAttribute="leading" secondItem="stD-L1-gg2" secondAttribute="leading" id="fCI-Nk-b6g"/>
-                            <constraint firstItem="pDN-rw-Y6s" firstAttribute="top" secondItem="glO-OE-jS1" secondAttribute="bottom" constant="6" id="ilo-1n-a1Z"/>
                             <constraint firstItem="pDN-rw-Y6s" firstAttribute="top" secondItem="glO-OE-jS1" secondAttribute="bottom" constant="6" id="lyu-XD-qP6"/>
-                            <constraint firstItem="stD-L1-gg2" firstAttribute="leading" secondItem="PO8-cZ-LK7" secondAttribute="leading" constant="10" id="nRi-JK-6XK"/>
                             <constraint firstItem="glO-OE-jS1" firstAttribute="leading" secondItem="pDN-rw-Y6s" secondAttribute="leading" id="oPZ-pp-sMw"/>
                             <constraint firstItem="glO-OE-jS1" firstAttribute="leading" secondItem="PO8-cZ-LK7" secondAttribute="leading" constant="10" id="u1O-x0-OOp"/>
                             <constraint firstItem="VPA-di-EUa" firstAttribute="height" secondItem="ccO-Ve-bOU" secondAttribute="height" id="vIN-0Q-31W"/>
