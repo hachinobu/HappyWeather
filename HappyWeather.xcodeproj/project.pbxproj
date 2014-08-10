@@ -17,7 +17,6 @@
 		C2ACDA09195EF73600F4745E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C2ACDA08195EF73600F4745E /* main.m */; };
 		C2ACDA0D195EF73600F4745E /* HACAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C2ACDA0C195EF73600F4745E /* HACAppDelegate.m */; };
 		C2ACDA10195EF73600F4745E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2ACDA0E195EF73600F4745E /* Main.storyboard */; };
-		C2ACDA13195EF73600F4745E /* HACWeatherListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C2ACDA12195EF73600F4745E /* HACWeatherListVC.m */; };
 		C2ACDA15195EF73600F4745E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2ACDA14195EF73600F4745E /* Images.xcassets */; };
 		C2ACDA1C195EF73600F4745E /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2ACDA1B195EF73600F4745E /* XCTest.framework */; };
 		C2ACDA1D195EF73600F4745E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2ACD9FC195EF73600F4745E /* Foundation.framework */; };
@@ -38,6 +37,9 @@
 		C2ACDA58196067A200F4745E /* HappyWord.plist in Resources */ = {isa = PBXBuildFile; fileRef = C2ACDA57196067A200F4745E /* HappyWord.plist */; };
 		C2ACDA5B196069C000F4745E /* HACHappyWordManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C2ACDA5A196069C000F4745E /* HACHappyWordManager.m */; };
 		C2ACDA5E1960794C00F4745E /* HACLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = C2ACDA5D1960794C00F4745E /* HACLoadingView.m */; };
+		C2B75C291992374300F144BD /* HACWeatherDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C2B75C281992374300F144BD /* HACWeatherDetailVC.m */; };
+		C2B75C2F1992383B00F144BD /* HACWeekWeatherListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C2B75C2E1992383B00F144BD /* HACWeekWeatherListVC.m */; };
+		C2B75C321993701800F144BD /* HACWeatherVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C2B75C311993701800F144BD /* HACWeatherVC.m */; };
 		FA4DF3E6212F42EF8613E11A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B4DEEA728E549F798F491CC /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -69,8 +71,6 @@
 		C2ACDA0B195EF73600F4745E /* HACAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HACAppDelegate.h; sourceTree = "<group>"; };
 		C2ACDA0C195EF73600F4745E /* HACAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HACAppDelegate.m; sourceTree = "<group>"; };
 		C2ACDA0F195EF73600F4745E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		C2ACDA11195EF73600F4745E /* HACWeatherListVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HACWeatherListVC.h; sourceTree = "<group>"; };
-		C2ACDA12195EF73600F4745E /* HACWeatherListVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HACWeatherListVC.m; sourceTree = "<group>"; };
 		C2ACDA14195EF73600F4745E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		C2ACDA1A195EF73600F4745E /* HappyWeatherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HappyWeatherTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2ACDA1B195EF73600F4745E /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -103,6 +103,12 @@
 		C2B75B9219867F4200F144BD /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
 		C2B75B9319867F4200F144BD /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C2B75B9419867F4200F144BD /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C2B75C271992374300F144BD /* HACWeatherDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HACWeatherDetailVC.h; sourceTree = "<group>"; };
+		C2B75C281992374300F144BD /* HACWeatherDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HACWeatherDetailVC.m; sourceTree = "<group>"; };
+		C2B75C2D1992383B00F144BD /* HACWeekWeatherListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HACWeekWeatherListVC.h; sourceTree = "<group>"; };
+		C2B75C2E1992383B00F144BD /* HACWeekWeatherListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HACWeekWeatherListVC.m; sourceTree = "<group>"; };
+		C2B75C301993701800F144BD /* HACWeatherVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HACWeatherVC.h; sourceTree = "<group>"; };
+		C2B75C311993701800F144BD /* HACWeatherVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HACWeatherVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,10 +179,9 @@
 		C2ACDA02195EF73600F4745E /* HappyWeather */ = {
 			isa = PBXGroup;
 			children = (
+				C2B75C22199235FE00F144BD /* Controller */,
 				C2ACDA0B195EF73600F4745E /* HACAppDelegate.h */,
 				C2ACDA0C195EF73600F4745E /* HACAppDelegate.m */,
-				C2ACDA11195EF73600F4745E /* HACWeatherListVC.h */,
-				C2ACDA12195EF73600F4745E /* HACWeatherListVC.m */,
 				C2ACDA14195EF73600F4745E /* Images.xcassets */,
 				C2ACDA0E195EF73600F4745E /* Main.storyboard */,
 				C2ACDA33195F002D00F4745E /* Model */,
@@ -258,6 +263,27 @@
 				C281082819612A8A00C48426 /* notactive.png */,
 			);
 			path = Resource;
+			sourceTree = "<group>";
+		};
+		C2B75C22199235FE00F144BD /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C2B75C261992367500F144BD /* Container */,
+				C2B75C301993701800F144BD /* HACWeatherVC.h */,
+				C2B75C311993701800F144BD /* HACWeatherVC.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		C2B75C261992367500F144BD /* Container */ = {
+			isa = PBXGroup;
+			children = (
+				C2B75C271992374300F144BD /* HACWeatherDetailVC.h */,
+				C2B75C281992374300F144BD /* HACWeatherDetailVC.m */,
+				C2B75C2D1992383B00F144BD /* HACWeekWeatherListVC.h */,
+				C2B75C2E1992383B00F144BD /* HACWeekWeatherListVC.m */,
+			);
+			path = Container;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -397,18 +423,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C2ACDA13195EF73600F4745E /* HACWeatherListVC.m in Sources */,
 				C2ACDA39195F0E5E00F4745E /* HACWeatherInfo.m in Sources */,
 				C2ACDA481960058900F4745E /* NSDateUtils.m in Sources */,
 				C2ACDA3F195FC3A100F4745E /* HACAddressInfo.m in Sources */,
 				C2ACDA5E1960794C00F4745E /* HACLoadingView.m in Sources */,
+				C2B75C2F1992383B00F144BD /* HACWeekWeatherListVC.m in Sources */,
 				C2ACDA5B196069C000F4745E /* HACHappyWordManager.m in Sources */,
 				C2827DEF1960E9F6000AE9FF /* UIColor+HexColor.m in Sources */,
 				C2ACDA43195FEE8800F4745E /* HACWeatherTableViewCell.m in Sources */,
+				C2B75C291992374300F144BD /* HACWeatherDetailVC.m in Sources */,
 				C2ACDA09195EF73600F4745E /* main.m in Sources */,
 				C2ACDA0D195EF73600F4745E /* HACAppDelegate.m in Sources */,
 				C2ACDA5519603AAB00F4745E /* HACWeatherDetailView.m in Sources */,
 				C2ACDA3C195FC0F900F4745E /* HACGoogleGeocodingAPI.m in Sources */,
+				C2B75C321993701800F144BD /* HACWeatherVC.m in Sources */,
 				C2ACDA36195F012400F4745E /* HACOpenWeatherMapAPI.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

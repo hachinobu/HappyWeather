@@ -1,46 +1,47 @@
 //
-//  HACViewController.m
+//  HACWeatherVC.m
 //  HappyWeather
 //
-//  Created by Takahiro Nishinobu on 2014/06/28.
+//  Created by Takahiro Nishinobu on 2014/08/07.
 //  Copyright (c) 2014年 Takahiro Nishinobu. All rights reserved.
 //
 
-#import "HACWeatherListVC.h"
+#import "HACWeatherVC.h"
 #import "HACWeatherInfo.h"
 #import "HACAddressInfo.h"
-#import "HACWeatherTableViewCell.h"
-#import "HACWeatherDetailView.h"
+#import "HACWeatherDetailVC.h"
+#import "HACWeekWeatherListVC.h"
 #import "HACLoadingView.h"
 
-@interface HACWeatherListVC () <CLLocationManagerDelegate>
+@interface HACWeatherVC () <CLLocationManagerDelegate, HACWeekWeatherListDelegate>
 
 @property (nonatomic, strong) CLLocationManager *locationManager;
 @property (nonatomic, strong) NSArray *weekWeatherInfos;
-@property (weak, nonatomic) IBOutlet UITableView *weatherTableView;
-@property (weak, nonatomic) IBOutlet HACWeatherDetailView *weatherDetailView;
+@property (nonatomic, strong) HACWeatherDetailVC *weatherDetailVC;
+@property (nonatomic, strong) HACWeekWeatherListVC *weatherListVC;
 
 @end
 
-@implementation HACWeatherListVC
+@implementation HACWeatherVC
+
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        // Custom initialization
+    }
+    return self;
+}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    // Do any additional setup after loading the view.
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:@selector(reloadWeekWeather)];
     self.locationManager = [[CLLocationManager alloc] init];
     self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
     self.locationManager.delegate = self;
     [self.locationManager startUpdatingLocation];
-    
-    UINib *nib = [UINib nibWithNibName:@"HACWeatherTableViewCell" bundle:nil];
-    [self.weatherTableView registerNib:nib forCellReuseIdentifier:HACWeatherCellIdentifier];
-}
-
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
 }
 
 - (void)didReceiveMemoryWarning
@@ -54,7 +55,7 @@
     if ([CLLocationManager authorizationStatus] != kCLAuthorizationStatusAuthorized) {
         
         if ([self.weekWeatherInfos count] == 0) {
-            [self.weatherDetailView noActive];
+            
         }
         
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil message:NSLocalizedString(@"設定 > プライバシー > 位置情報サービスからHappyWeatherによる位置情報の利用を許可してください。", nil) delegate:nil cancelButtonTitle:NSLocalizedString(@"OK", nil) otherButtonTitles:nil, nil];
@@ -67,35 +68,26 @@
 
 - (void)reloadDetailViewWithWeatherInfo:(HACWeatherInfo *)weatherInfo
 {
-    [self.weatherDetailView configureViewWithWeatherInfo:weatherInfo];
+    [self.weatherDetailVC reloadDetailViewWithWeatherInfo:weatherInfo];
 }
 
-#pragma mark - UITableViewDataSource
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+#pragma mark - Segue
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    return [self.weekWeatherInfos count];
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    HACWeatherTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:HACWeatherCellIdentifier];
-    [cell configureCellWithWeatherInfo:self.weekWeatherInfos[indexPath.row]];
-    
-    return cell;
-}
-
-#pragma mark - UITableViewDelegate
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    [self reloadDetailViewWithWeatherInfo:self.weekWeatherInfos[indexPath.row]];
+    NSString *identifier = [segue identifier];
+    if ([identifier isEqualToString:@"weatherDetail"]) {
+        self.weatherDetailVC = segue.destinationViewController;
+    }
+    else if ([identifier isEqualToString:@"weatherList"]) {
+        self.weatherListVC = segue.destinationViewController;
+        self.weatherListVC.delegate = self;
+    }
 }
 
 #pragma mark - CLLocationManagerDelegate
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
 {
     CLLocation *newLocation = [locations lastObject];
-    
     if([newLocation.timestamp timeIntervalSinceNow] > 60) {
         return;
     }
@@ -115,7 +107,7 @@
         HACLoadingView *loadView = [[HACLoadingView alloc] initWithFrame:[UIScreen mainScreen].bounds];
         [loadView showInSuperView:self.navigationController.view animated:YES];
         self.weekWeatherInfos = weatherInfos;
-        [self.weatherTableView reloadData];
+        [self.weatherListVC reloadWeekWeatherInfo:self.weekWeatherInfos];
         [self reloadDetailViewWithWeatherInfo:[self.weekWeatherInfos firstObject]];
         [loadView hideWithAnimated:YES];
         
@@ -124,5 +116,22 @@
         [alert show];
     }];
 }
+
+#pragma mark - HACWeekWeatherListDelegate
+- (void)reflectDetailWithSelectInfo:(HACWeatherInfo *)weatherInfo
+{
+    [self reloadDetailViewWithWeatherInfo:weatherInfo];
+}
+
+/*
+#pragma mark - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+}
+*/
 
 @end
