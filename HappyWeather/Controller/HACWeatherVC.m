@@ -68,7 +68,11 @@
 
 - (void)reloadDetailViewWithWeatherInfo:(HACWeatherInfo *)weatherInfo
 {
-    [self.weatherDetailVC reloadDetailViewWithWeatherInfo:weatherInfo];
+    [UIView transitionWithView:self.weatherDetailVC.view duration:1.0f options:UIViewAnimationOptionTransitionCurlUp animations:^{
+        [self.weatherDetailVC reloadDetailViewWithWeatherInfo:weatherInfo];
+    } completion:^(BOOL finished) {
+        
+    }];
 }
 
 #pragma mark - Segue
