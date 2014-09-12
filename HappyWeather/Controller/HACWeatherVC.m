@@ -41,6 +41,10 @@
     self.locationManager = [[CLLocationManager alloc] init];
     self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
     self.locationManager.delegate = self;
+    
+    if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0) {
+        [self.locationManager requestAlwaysAuthorization];
+    }
     [self.locationManager startUpdatingLocation];
 }
 
